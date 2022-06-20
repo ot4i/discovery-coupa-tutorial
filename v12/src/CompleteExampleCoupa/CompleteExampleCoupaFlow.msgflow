@@ -7,8 +7,18 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CompleteExampleCoupa/icons/full/obj16/CompleteExampleCoupaFlow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CompleteExampleCoupa/icons/full/obj30/CompleteExampleCoupaFlow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmApplicationConnectorRequest_coupa.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="422,89" applicationConnectorType="coupa">
+      <nodes xmi:type="ComIbmApplicationConnectorRequest_coupa.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="422,89" applicationConnectorType="coupa" action="RETRIEVEALL" businessObject="invoices" displayName="Retrieve invoices" policyUrl="{CompletePolicyProjectCoupa}:Coupa1">
+        <filter>
+          <filterElementObject type="where">
+            <filterElementArray type="and">
+              <connectorPropertyRef propertyName="supplier_id" compareAction=""/>
+            </filterElementArray>
+          </filterElementObject>
+          <queryProperties limit="3" allowTruncation="true" paginationType="SKIP_LIMIT"/>
+          <propagateBehaviour allowEmptyOutput="false"/>
+        </filter>
         <translation xmi:type="utility:ConstantString" string="Coupa Request"/>
+        <connectorProperty propertyName="supplier_id" displayName="Supplier" propertyValue="4"/>
       </nodes>
       <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="420,33">
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
@@ -16,7 +26,7 @@
       <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="662,36" destination="file" filePath="C:\temp\TraceCompleteExampleCoupaFailure.txt" pattern="========== Trace Generated at ${CURRENT_TIMESTAMP} ==========&#xD;&#xA;${Root}&#xD;&#xA;${LocalEnvironment}&#xD;&#xA;${ExceptionList}&#xD;&#xA;==================================================">
         <translation xmi:type="utility:ConstantString" string="TraceFailure"/>
       </nodes>
-      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="21,38" URLSpecifier="/CompleteExampleCoupaFlow" messageDomainProperty="JSON">
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="9,74" URLSpecifier="/CompleteExampleCoupaFlow" messageDomainProperty="JSON">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
       <nodes xmi:type="ComIbmFlowOrder.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="210,33">

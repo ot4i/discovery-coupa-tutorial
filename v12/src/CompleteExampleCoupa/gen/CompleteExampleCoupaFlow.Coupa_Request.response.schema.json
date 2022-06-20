@@ -1,0 +1,1047 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "account-type": {
+        "displayOrder": 11,
+        "title": "Chart of accounts",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "name": {
+            "displayOrder": 2,
+            "title": "Name",
+            "type": "string"
+          }
+        }
+      },
+      "bill-to-address": {
+        "displayOrder": 26,
+        "title": "Bill to address",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "name": {
+            "displayOrder": 2,
+            "title": "Name",
+            "type": "string"
+          },
+          "location-code": {
+            "displayOrder": 3,
+            "title": "Location code",
+            "type": "string"
+          }
+        }
+      },
+      "cash-accounting-scheme-reference": {
+        "displayOrder": 27,
+        "title": "Cash accounting scheme reference",
+        "type": "string"
+      },
+      "comments": {
+        "displayOrder": 10,
+        "title": "Comment",
+        "type": "string"
+      },
+      "compliant": {
+        "displayOrder": 28,
+        "title": "Compliant",
+        "type": "boolean"
+      },
+      "created-at": {
+        "displayOrder": 29,
+        "title": "Created at",
+        "type": "string",
+        "format": "date-time"
+      },
+      "created-by": {
+        "displayOrder": 30,
+        "title": "Created by",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "login": {
+            "displayOrder": 2,
+            "title": "Login ID",
+            "type": "string"
+          },
+          "email": {
+            "displayOrder": 3,
+            "title": "Email",
+            "type": "string"
+          }
+        }
+      },
+      "credit-reason": {
+        "displayOrder": 31,
+        "title": "Credit reason",
+        "type": "string"
+      },
+      "currency": {
+        "displayOrder": 5,
+        "title": "Currency",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "code": {
+            "displayOrder": 2,
+            "title": "Code",
+            "type": "string"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "discount-amount": {
+        "displayOrder": 33,
+        "title": "Discount amount",
+        "type": "number"
+      },
+      "discount-due-date": {
+        "displayOrder": 34,
+        "title": "Discount due date",
+        "type": "string",
+        "format": "date-time"
+      },
+      "document-type": {
+        "displayOrder": 35,
+        "title": "Document type",
+        "type": "string"
+      },
+      "early-payment-provisions": {
+        "displayOrder": 36,
+        "title": "Early payment provisions",
+        "type": "string"
+      },
+      "exchange-rate": {
+        "displayOrder": 37,
+        "title": "Exchange rate",
+        "type": "number"
+      },
+      "exported": {
+        "displayOrder": 38,
+        "title": "Exported",
+        "type": "boolean"
+      },
+      "gross-total-as-money": {
+        "displayOrder": 19,
+        "title": "Total",
+        "type": "number"
+      },
+      "handling-amount": {
+        "displayOrder": 15,
+        "title": "Handling amount",
+        "type": "number"
+      },
+      "id": {
+        "displayOrder": 39,
+        "title": "Invoice ID",
+        "type": "string"
+      },
+      "image-scan": {
+        "displayOrder": 40,
+        "title": "Image scan",
+        "type": "string"
+      },
+      "image-scan-url": {
+        "displayOrder": 41,
+        "title": "Image scan URL",
+        "type": "string"
+      },
+      "internal-note": {
+        "displayOrder": 42,
+        "title": "Internal note",
+        "type": "string"
+      },
+      "invoice-date": {
+        "displayOrder": 3,
+        "title": "Invoice date",
+        "type": "string"
+      },
+      "invoice-lines": {
+        "displayOrder": 75,
+        "title": "Invoice lines",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "displayOrder": 1,
+              "title": "ID",
+              "type": "number"
+            },
+            "account": {
+              "displayOrder": 2,
+              "title": "Account",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "code": {
+                  "displayOrder": 2,
+                  "title": "Code",
+                  "type": "string"
+                }
+              }
+            },
+            "account-allocations": {
+              "displayOrder": 3,
+              "title": "Account allocations",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "title": "ID",
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "accounting-total": {
+              "displayOrder": 4,
+              "title": "Accounting total",
+              "type": "number"
+            },
+            "accounting-total-currency": {
+              "displayOrder": 5,
+              "title": "Accounting total currency",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "code": {
+                  "displayOrder": 2,
+                  "title": "Code",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 3,
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "billing-note": {
+              "displayOrder": 6,
+              "title": "Billing note",
+              "type": "string"
+            },
+            "contract": {
+              "displayOrder": 7,
+              "title": "Contract",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "name": {
+                  "displayOrder": 2,
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "currency": {
+              "displayOrder": 8,
+              "title": "Currency",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "code": {
+                  "displayOrder": 2,
+                  "title": "Code",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 3,
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "delivery-note-number": {
+              "displayOrder": 9,
+              "title": "Delivery note number",
+              "type": "string"
+            },
+            "description": {
+              "displayOrder": 10,
+              "title": "Description",
+              "type": "string"
+            },
+            "item": {
+              "displayOrder": 11,
+              "title": "Item",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "item-number": {
+                  "displayOrder": 2,
+                  "title": "Item number",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 3,
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "line-num": {
+              "displayOrder": 12,
+              "title": "Line num",
+              "type": "string"
+            },
+            "match-reference": {
+              "displayOrder": 13,
+              "title": "Match reference",
+              "type": "string"
+            },
+            "net-weight": {
+              "displayOrder": 14,
+              "title": "Net weight",
+              "type": "number"
+            },
+            "order-line-id": {
+              "displayOrder": 15,
+              "title": "Order line ID",
+              "type": "number"
+            },
+            "original-date-of-supply": {
+              "displayOrder": 16,
+              "title": "Original date of supply",
+              "type": "string",
+              "format": "date-time"
+            },
+            "period": {
+              "displayOrder": 17,
+              "title": "Period",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "name": {
+                  "displayOrder": 2,
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "price": {
+              "displayOrder": 18,
+              "title": "Price",
+              "type": "number"
+            },
+            "price-per-uom": {
+              "displayOrder": 19,
+              "title": "Price per UOM",
+              "type": "number"
+            },
+            "quantity": {
+              "displayOrder": 20,
+              "title": "Quantity",
+              "type": "number"
+            },
+            "taggings": {
+              "displayOrder": 21,
+              "title": "Taggings",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "title": "ID",
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "tags": {
+              "displayOrder": 22,
+              "title": "Tags",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "displayOrder": 1,
+                    "title": "ID",
+                    "type": "number"
+                  },
+                  "name": {
+                    "displayOrder": 2,
+                    "title": "Name",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "tax-amount": {
+              "displayOrder": 23,
+              "title": "Tax amount",
+              "type": "number"
+            },
+            "tax-code": {
+              "displayOrder": 24,
+              "title": "Tax code",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "code": {
+                  "displayOrder": 2,
+                  "title": "Code",
+                  "type": "string"
+                }
+              }
+            },
+            "tax-lines": {
+              "displayOrder": 25,
+              "title": "Tax lines",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "title": "ID",
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "tax-rate": {
+              "displayOrder": 26,
+              "title": "Tax rate",
+              "type": "number"
+            },
+            "type__invoiceLines": {
+              "displayOrder": 27,
+              "title": "Type",
+              "type": "string"
+            },
+            "uom": {
+              "displayOrder": 28,
+              "title": "Unit of measure",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "code": {
+                  "displayOrder": 2,
+                  "title": "Code",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 3,
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "weight-uom": {
+              "displayOrder": 28,
+              "title": "Weight unit of measure",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "displayOrder": 1,
+                  "title": "ID",
+                  "type": "number"
+                },
+                "code": {
+                  "displayOrder": 2,
+                  "title": "Code",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 3,
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "invoice-number": {
+        "displayOrder": 2,
+        "title": "Invoice #",
+        "type": "string"
+      },
+      "last-exported-at": {
+        "displayOrder": 44,
+        "title": "Last exported at",
+        "type": "string",
+        "format": "date-time"
+      },
+      "late-payment-penalties": {
+        "displayOrder": 45,
+        "title": "Late payment penalties",
+        "type": "string"
+      },
+      "line-level-taxation": {
+        "displayOrder": 46,
+        "title": "Line level taxation",
+        "type": "boolean"
+      },
+      "margin-scheme": {
+        "displayOrder": 47,
+        "title": "Margin scheme",
+        "type": "string"
+      },
+      "misc-amount": {
+        "displayOrder": 16,
+        "title": "Miscellaneous amount",
+        "type": "number"
+      },
+      "net-due-date": {
+        "displayOrder": 48,
+        "title": "Net due date",
+        "type": "string",
+        "format": "date-time"
+      },
+      "origin-currency-gross": {
+        "displayOrder": 49,
+        "title": "Origin currency gross",
+        "type": "number"
+      },
+      "origin-currency-net": {
+        "displayOrder": 50,
+        "title": "Origin currency net",
+        "type": "number"
+      },
+      "original-invoice-date": {
+        "displayOrder": 51,
+        "title": "Original invoice date",
+        "type": "string",
+        "format": "date-time"
+      },
+      "original-invoice-number": {
+        "displayOrder": 52,
+        "title": "Original invoice number",
+        "type": "string"
+      },
+      "paid": {
+        "displayOrder": 20,
+        "title": "Paid",
+        "type": "boolean"
+      },
+      "payment-date": {
+        "displayOrder": 21,
+        "title": "Payment date",
+        "type": "string",
+        "format": "date-time"
+      },
+      "payment-notes": {
+        "displayOrder": 22,
+        "title": "Payment notes",
+        "type": "string"
+      },
+      "payment-term": {
+        "displayOrder": 4,
+        "title": "Payment term",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "code": {
+            "displayOrder": 2,
+            "title": "Code",
+            "type": "string"
+          }
+        }
+      },
+      "pre-payment-date": {
+        "displayOrder": 54,
+        "title": "Pre-payment date",
+        "type": "string",
+        "format": "date-time"
+      },
+      "remit-to-address": {
+        "displayOrder": 12,
+        "title": "Remit to",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "remit-to-code": {
+            "displayOrder": 2,
+            "title": "Remit-to code",
+            "type": "string"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Name",
+            "type": "string"
+          }
+        }
+      },
+      "reverse-charge-reference": {
+        "displayOrder": 55,
+        "title": "Reverse charge reference",
+        "type": "string"
+      },
+      "self-billing-reference": {
+        "displayOrder": 56,
+        "title": "Self billing reference",
+        "type": "string"
+      },
+      "shipping-amount": {
+        "displayOrder": 14,
+        "title": "Shipping amount",
+        "type": "number"
+      },
+      "status": {
+        "displayOrder": 6,
+        "title": "Status",
+        "type": "string"
+      },
+      "supplier": {
+        "displayOrder": 1,
+        "title": "Supplier",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "name": {
+            "displayOrder": 2,
+            "title": "Name",
+            "type": "string"
+          },
+          "number": {
+            "displayOrder": 3,
+            "title": "Number",
+            "type": "number"
+          }
+        }
+      },
+      "supplier-created": {
+        "displayOrder": 57,
+        "title": "Supplier created",
+        "type": "boolean"
+      },
+      "supplier-note": {
+        "displayOrder": 7,
+        "title": "Supplier note",
+        "type": "string"
+      },
+      "supplier-total": {
+        "displayOrder": 58,
+        "title": "Supplier total",
+        "type": "number"
+      },
+      "tax-amount": {
+        "displayOrder": 59,
+        "title": "Tax amount",
+        "type": "number"
+      },
+      "tax-code": {
+        "displayOrder": 17,
+        "title": "Tax code",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "code": {
+            "displayOrder": 2,
+            "title": "Code",
+            "type": "string"
+          }
+        }
+      },
+      "tax-lines": {
+        "displayOrder": 60,
+        "title": "Tax lines",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "title": "TID",
+              "type": "number"
+            }
+          }
+        }
+      },
+      "tax-rate": {
+        "displayOrder": 61,
+        "title": "Tax rate",
+        "type": "number"
+      },
+      "taxes-in-origin-country-currency": {
+        "displayOrder": 62,
+        "title": "Local currency tax",
+        "type": "number"
+      },
+      "tolerance-failures": {
+        "displayOrder": 63,
+        "title": "Tolerance failures",
+        "type": "string"
+      },
+      "total-tax": {
+        "displayOrder": 18,
+        "title": "Total tax",
+        "type": "number"
+      },
+      "total-with-taxes-as-money": {
+        "displayOrder": 64,
+        "title": "Total with taxes as money",
+        "type": "number"
+      },
+      "updated-at": {
+        "displayOrder": 65,
+        "title": "Updated at",
+        "type": "string",
+        "format": "date-time"
+      },
+      "updated-by": {
+        "displayOrder": 66,
+        "title": "Updated by",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "login": {
+            "displayOrder": 2,
+            "title": "Login ID",
+            "type": "string"
+          },
+          "email": {
+            "displayOrder": 3,
+            "title": "Email",
+            "type": "string"
+          }
+        }
+      },
+      "contract": {
+        "displayOrder": 67,
+        "title": "Contract",
+        "type": "object",
+        "properties": {
+          "name": {
+            "displayOrder": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "number": {
+            "displayOrder": 2,
+            "title": "Number",
+            "type": "string"
+          },
+          "start-date": {
+            "displayOrder": 3,
+            "title": "Start date",
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "displayOrder": 4,
+            "title": "Status",
+            "type": "string"
+          },
+          "id": {
+            "displayOrder": 5,
+            "title": "ID",
+            "type": "number"
+          }
+        }
+      },
+      "destination-country": {
+        "displayOrder": 68,
+        "title": "Destination country",
+        "type": "object",
+        "properties": {
+          "code": {
+            "displayOrder": 1,
+            "title": "Code",
+            "type": "string"
+          },
+          "id": {
+            "displayOrder": 2,
+            "title": "ID",
+            "type": "number"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Name",
+            "type": "string"
+          }
+        }
+      },
+      "legal-destination-country": {
+        "displayOrder": 69,
+        "title": "Legal destination country",
+        "type": "object",
+        "properties": {
+          "code": {
+            "displayOrder": 1,
+            "title": "Code",
+            "type": "string"
+          },
+          "id": {
+            "displayOrder": 2,
+            "title": "ID",
+            "type": "number"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Name",
+            "type": "string"
+          }
+        }
+      },
+      "origin-country": {
+        "displayOrder": 70,
+        "title": "Origin country",
+        "type": "object",
+        "properties": {
+          "code": {
+            "displayOrder": 1,
+            "title": "Code",
+            "type": "string"
+          },
+          "id": {
+            "displayOrder": 2,
+            "title": "ID",
+            "type": "number"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Name",
+            "type": "string"
+          }
+        }
+      },
+      "requested-by": {
+        "displayOrder": 9,
+        "title": "Requester",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "login": {
+            "displayOrder": 2,
+            "title": "Login ID",
+            "type": "string"
+          },
+          "email": {
+            "displayOrder": 3,
+            "title": "Email",
+            "type": "string"
+          }
+        }
+      },
+      "ship-to-address": {
+        "displayOrder": 71,
+        "title": "Ship to address",
+        "type": "object",
+        "properties": {
+          "city": {
+            "displayOrder": 1,
+            "title": "City",
+            "type": "string"
+          },
+          "id": {
+            "displayOrder": 2,
+            "title": "ID",
+            "type": "number"
+          },
+          "local-tax-number": {
+            "displayOrder": 3,
+            "title": "Local tax number",
+            "type": "string"
+          },
+          "postal-code": {
+            "displayOrder": 4,
+            "title": "Postal code",
+            "type": "string"
+          },
+          "street1": {
+            "displayOrder": 5,
+            "title": "Street 1",
+            "type": "string"
+          },
+          "vat-number": {
+            "displayOrder": 6,
+            "title": "VAT number",
+            "type": "string"
+          },
+          "name": {
+            "displayOrder": 7,
+            "title": "Name",
+            "type": "string"
+          },
+          "location_code": {
+            "displayOrder": 8,
+            "title": "Location code",
+            "type": "string"
+          }
+        }
+      },
+      "shipping-term": {
+        "displayOrder": 72,
+        "title": "Shipping term",
+        "type": "object",
+        "properties": {
+          "code": {
+            "displayOrder": 1,
+            "title": "Code",
+            "type": "string"
+          },
+          "id": {
+            "displayOrder": 2,
+            "title": "ID",
+            "type": "number"
+          }
+        }
+      },
+      "supplier-remit-to": {
+        "displayOrder": 73,
+        "title": "Supplier remit to",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "type": "number"
+          },
+          "remit-to-code": {
+            "displayOrder": 2,
+            "title": "Remit-to code",
+            "type": "string"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Name",
+            "type": "string"
+          }
+        }
+      },
+      "tax-amount-engine": {
+        "displayOrder": 74,
+        "title": "Tax amount engine",
+        "type": "number"
+      },
+      "supplier_id": {
+        "displayOrder": 25,
+        "title": "Supplier ID",
+        "type": "string"
+      },
+      "tags": {
+        "displayOrder": 13,
+        "title": "Tags",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "displayOrder": 1,
+              "title": "ID",
+              "type": "number"
+            },
+            "name": {
+              "displayOrder": 2,
+              "title": "Name",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "custom_fields": {
+        "displayOrder": 24,
+        "title": "Custom fields",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "displayOrder": 1,
+              "title": "Name",
+              "type": "string"
+            },
+            "value": {
+              "displayOrder": 2,
+              "title": "Value",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "title": "invoices",
+    "required": [
+      "currency",
+      "invoice-date",
+      "invoice-number"
+    ]
+  },
+  "type": "array",
+  "title": "invoices"
+}
